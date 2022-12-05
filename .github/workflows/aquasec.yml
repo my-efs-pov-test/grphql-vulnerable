@@ -60,4 +60,3 @@ jobs:
               --aqua-key "${{ secrets.AQUA_KEY }}" \
               --aqua-secret "${{ secrets.AQUA_SECRET }}" \
               --artifact-path "my-efs-pov-test/grphql-vulnerable:${{ github.sha }}" 
-
