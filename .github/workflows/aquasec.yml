@@ -3,8 +3,7 @@ on:
   push:
     branches:
       - master
-      - test-sbom
-      
+      - test-sbom 
 jobs:
   checkout:
     name: Checkout
