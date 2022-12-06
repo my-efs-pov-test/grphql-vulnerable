@@ -23,8 +23,7 @@ jobs:
           scan-type: 'fs'
           security-checks: 'vuln,config,secret'
           hide-progress: false
-          format: 'sarif'
-          output: 'results.sarif'
+          format: 'table'
         env:
           AQUA_KEY: ${{ secrets.AQUA_KEY }}
           AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
@@ -35,7 +34,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: "my-efs-pov-test/grphql-vulnerable:${{ github.sha }}"
+          tags: "aquajcampbell/grphql-vulnerable:${{ github.sha }}"
         env:
           AQUA_KEY: ${{ secrets.AQUA_KEY }}
           AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
@@ -55,4 +54,4 @@ jobs:
               --access-token "${{ secrets.GITHUB_TOKEN }}" \
               --aqua-key "${{ secrets.AQUA_KEY }}" \
               --aqua-secret "${{ secrets.AQUA_SECRET }}" \
-              --artifact-path "my-efs-pov-test/grphql-vulnerable:${{ github.sha }}" 
+              --artifact-path "aquajcampbell/grphql-vulnerable:${{ github.sha }}" 
