@@ -22,3 +22,4 @@ jobs:
           TRIVY_RUN_AS_PLUGIN: 'aqua'
           GITHUB_TOKEN: ${{ github.token }}
           PACKAGE_JSON: "1"
+          SAST: "1"
